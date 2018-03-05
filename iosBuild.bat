@@ -1,0 +1,2 @@
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe /p:Configuration="Release" /p:Platform="iPhone" /p:ServerAddress="192.168.1.145" /p:ServerUser="svetlanatanasov" /p:IpaPackageDir="%USERPROFILE%\Builds" /t:Build C:\Code\TapFast2\TapFast2.sln
+pause

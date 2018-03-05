@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="X5k-f2-b5h">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="gAE-YM-kbH">
+            <objects>
+                <viewController id="X5k-f2-b5h" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y8P-hJ-Z43"/>
+                        <viewControllerLayoutGuide type="bottom" id="9ZL-r4-8FZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yd7-JS-zBw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="73" translatesAutoresizingMaskIntoConstraints="NO" image="launchScreen320x568.png">
+                                <rect key="frame" x="140" y="16" width="320" height="568"/>
+                                <constraints>
+                                    <constraint id="85" firstItem="73" firstAttribute="width" constant="320"/>
+                                    <constraint id="86" firstItem="73" firstAttribute="height" constant="568"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" customColorSpace="sRGB" colorSpace="calibratedRGB" red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1"/>
+                        <constraints>
+                            <constraint id="74" firstItem="73" firstAttribute="centerX" secondItem="yd7-JS-zBw" secondAttribute="centerX"/>
+                            <constraint id="75" firstItem="73" firstAttribute="centerY" secondItem="yd7-JS-zBw" secondAttribute="centerY"/>
+                        </constraints>
+                    </view>
+                    <connections/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XAI-xm-WK6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="349" y="339"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Content/Images/Hd/blue40x40.png" width="40" height="40"/>
+        <image name="Content/Images/Hd/bluePx.png" width="768" height="4"/>
+        <image name="Content/Images/Hd/BlueSquare.png" width="240" height="240"/>
+        <image name="Content/Images/Hd/green40x40.png" width="40" height="40"/>
+        <image name="Content/Images/Hd/greenplus.png" width="32" height="32"/>
+        <image name="Content/Images/Hd/GreenSquare.png" width="240" height="240"/>
+        <image name="Content/Images/Hd/level.png" width="42" height="158"/>
+        <image name="Content/Images/Hd/linepurple.png" width="642" height="8"/>
+        <image name="Content/Images/Hd/lives.png" width="42" height="153"/>
+        <image name="Content/Images/Hd/mute.png" width="86" height="86"/>
+        <image name="Content/Images/Hd/pause.png" width="86" height="86"/>
+        <image name="Content/Images/Hd/play.png" width="86" height="86"/>
+        <image name="Content/Images/Hd/red40x40.png" width="40" height="40"/>
+        <image name="Content/Images/Hd/redplus.png" width="32" height="32"/>
+        <image name="Content/Images/Hd/RedSquare.png" width="240" height="240"/>
+        <image name="Content/Images/Hd/sound.png" width="86" height="86"/>
+        <image name="Content/Images/Hd/soundOff.png" width="96" height="97"/>
+        <image name="Content/Images/Hd/soundOn.png" width="96" height="97"/>
+        <image name="Content/Images/Hd/yellow40x40.png" width="40" height="40"/>
+        <image name="Content/Images/Hd/YellowSquare.png" width="240" height="240"/>
+        <image name="Content/Images/Ld/blue40x40.png" width="40" height="40"/>
+        <image name="Content/Images/Ld/bluePx.png" width="768" height="4"/>
+        <image name="Content/Images/Ld/BlueSquare.png" width="120" height="120"/>
+        <image name="Content/Images/Ld/green40x40.png" width="40" height="40"/>
+        <image name="Content/Images/Ld/GreenSquare.png" width="120" height="120"/>
+        <image name="Content/Images/Ld/level.png" width="42" height="158"/>
+        <image name="Content/Images/Ld/linepurple.png" width="642" height="8"/>
+        <image name="Content/Images/Ld/lives.png" width="42" height="153"/>
+        <image name="Content/Images/Ld/mute.png" width="86" height="86"/>
+        <image name="Content/Images/Ld/pause.png" width="86" height="86"/>
+        <image name="Content/Images/Ld/play.png" width="86" height="86"/>
+        <image name="Content/Images/Ld/red40x40.png" width="40" height="40"/>
+        <image name="Content/Images/Ld/RedSquare.png" width="120" height="120"/>
+        <image name="Content/Images/Ld/sound.png" width="86" height="86"/>
+        <image name="Content/Images/Ld/soundOff.png" width="44" height="44"/>
+        <image name="Content/Images/Ld/soundOn.png" width="44" height="44"/>
+        <image name="Content/Images/Ld/yellow40x40.png" width="40" height="40"/>
+        <image name="Content/Images/Ld/YellowSquare.png" width="120" height="120"/>
+        <image name="512x512.png" width="512" height="512"/>
+        <image name="Default-568h.png" width="320" height="568"/>
+        <image name="Default-Landscape.png" width="1024" height="748"/>
+        <image name="Default-Portrait.png" width="768" height="1004"/>
+        <image name="Default.png" width="320" height="480"/>
+        <image name="Icon-60.png" width="60" height="60"/>
+        <image name="Icon-72.png" width="72" height="72"/>
+        <image name="Icon-76.png" width="76" height="76"/>
+        <image name="Icon-Small-40.png" width="40" height="40"/>
+        <image name="Icon-Small-50.png" width="50" height="50"/>
+        <image name="Icon-Small.png" width="29" height="29"/>
+        <image name="Icon.png" width="57" height="57"/>
+        <image name="jusTap512x512.png" width="512" height="512"/>
+        <image name="logo240x240.png" width="240" height="240"/>
+        <image name="launchScreen320x568.png" width="320" height="568"/>
+    </resources>
+</document>

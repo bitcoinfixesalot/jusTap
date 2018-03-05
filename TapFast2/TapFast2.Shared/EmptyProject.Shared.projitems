@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="SharedProjectFile_SccProperties">
+    <SharedProjectFile_ProjectGuid>{915ad1fc-c4cf-43fc-8ad9-b1c4f2f17c4f}</SharedProjectFile_ProjectGuid>
+    <SharedProjectFile_SccProjectName>SAK</SharedProjectFile_SccProjectName>
+    <SharedProjectFile_SccAuxPath>SAK</SharedProjectFile_SccAuxPath>
+    <SharedProjectFile_SccLocalPath>SAK</SharedProjectFile_SccLocalPath>
+    <SharedProjectFile_SccProvider>SAK</SharedProjectFile_SccProvider>
+  </PropertyGroup>
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>1faed813-65bd-4155-a8c1-75f7703db18b</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>TapFast2</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CocosSharp\GameLayer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CocosSharp\Square.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CocosSharp\SquaresGenerator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameOptionsPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ArcadeGameOptionsPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Constants\Settings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enums\Enums.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MenuPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ArcadeGameOptions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\GameOptions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PlayHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ISettingsService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\SettingsService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OptionsTabbedPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GamePage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Resx\" />
+  </ItemGroup>
+</Project>

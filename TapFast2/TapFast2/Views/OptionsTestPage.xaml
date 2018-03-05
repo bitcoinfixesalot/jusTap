@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TapFast2.OptionsTestPage"
+             xmlns:fe="clr-namespace:TapFast2;assembly=TapFast2"
+             BindingContext="{Binding OptionsViewModel, Source={StaticResource Key=Locator}}">
+    <StackLayout Padding="10" Spacing="10">
+      
+        <!--<Picker x:Name="difficultyPicker">
+                <Picker.Items>
+                    <x:String>Easy</x:String>
+                    <x:String>Normal</x:String>
+                    <x:String>Hard</x:String>
+                </Picker.Items>
+                
+            </Picker>-->
+
+      <StackLayout Orientation="Horizontal" Spacing="10">
+        <Label Text="Enable Sound" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand"/>
+        <Switch IsToggled="{Binding SoundEnabled}"/>
+      </StackLayout>
+        <StackLayout Padding="0,20,0,0" Orientation="Horizontal" Spacing="10">
+            <Label Text="Dark Theme" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand"/>
+            <Switch IsToggled="{Binding IsDarkTheme}"/>
+        </StackLayout>
+        <Label Text="Difficulty" Margin="0, 20, 0, 0"/>
+
+        <fe:BindablePicker ItemsSource="{Binding DifficultyModes}" SelectedItem="{Binding SelectedDifficulty, Mode=TwoWay}" DisplayProperty="ModeText" Title="Select Difficulty" />
+        <Button IsVisible="{Binding IsRemoveAdsVisible}" Margin="10" Text="{Binding RemoveAdsButtonText}" Command="{Binding RemoveAds}">
+        </Button>
+    </StackLayout>
+</ContentPage>

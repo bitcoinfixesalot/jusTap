@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TapFast2.LeaderboardPage"
+             xmlns:local="clr-namespace:TapFast2;assembly=TapFast2"
+             >
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="0, 20, 0, 0"
+                    Android="0, 0, 0, 0"
+                    WinPhone="0, 0, 0, 0" />
+    </ContentPage.Padding>
+    <ListView ItemsSource="{Binding ScoreItems}"
+                HasUnevenRows="True"
+                CachingStrategy="RecycleElement"
+                IsPullToRefreshEnabled="True"
+                RefreshCommand="{Binding GetLeaderboardCommand}"
+                IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                RowHeight="66"
+                x:Name="ListViewLeaderboard">
+    <ListView.SeparatorColor>
+      <OnPlatform x:TypeArguments="Color" iOS="Transparent"/>
+    </ListView.SeparatorColor>
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <StackLayout Orientation="Horizontal" Padding="10,0,10,0">
+                <Label Text="{Binding Number}" VerticalOptions="Center" Style="{DynamicResource ListItemTextStyle}"/>
+                <Image HeightRequest="44"
+                   WidthRequest="44"
+                   Source="{Binding PlatformIcon}"/>
+                <StackLayout Padding="10" Spacing="5">
+               <Label Text="{Binding Name}"
+                     TextColor="#3498db"
+                     Style="{DynamicResource ListItemTextStyle}"/>
+                            <Label Text="{Binding GameModeText}" 
+                                   Style="{DynamicResource ListItemDetailTextStyle}"/>
+         
+                </StackLayout>
+            <Label Text="{Binding Score}" HorizontalOptions="EndAndExpand" VerticalOptions="Center"
+                     Style="{DynamicResource ListItemTextStyle}"/>
+          </StackLayout>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+</ContentPage>

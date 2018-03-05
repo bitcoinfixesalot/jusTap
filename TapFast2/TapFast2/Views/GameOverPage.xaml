@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TapFast2.GameOverPage"
+             xmlns:controls="clr-namespace:TapFast2.Controls;assembly=TapFast2"
+             BindingContext="{Binding GameOverViewModel, Source={StaticResource Locator}}">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="0, 20, 0, 0"
+                    Android="0, 0, 0, 0"
+                    WinPhone="0, 0, 0, 0" />
+    </ContentPage.Padding>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0" Source="{Binding Logo}" HorizontalOptions="Center" Margin="0, 20, 0, 0"></Image>
+        <Label Grid.Row="1" Text="{Binding GameModeText}" FontSize="Large" HorizontalOptions="CenterAndExpand" Margin="20" TextColor="#3498db"></Label>
+
+    <StackLayout Grid.Row="2" Padding="40,20, 40, 40" Spacing="10">
+            <Label Text="{Binding CurrentScoreText}" FontSize="Medium" HorizontalOptions="CenterAndExpand" TextColor="#3498db"></Label>
+            <Label Text="{Binding YourHighscoreText}" FontSize="Default" HorizontalOptions="CenterAndExpand" TextColor="#3498db"></Label>
+            <Label Text="{Binding GameHighscoreText}" FontSize="Default" HorizontalOptions="CenterAndExpand" TextColor="#3498db"></Label>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Restart" Command="{Binding RestartGameCommand}" HorizontalOptions="StartAndExpand">
+                    <Button.BackgroundColor>
+                        <OnPlatform  x:TypeArguments="Color" Android="#1BA1E2"></OnPlatform>
+                    </Button.BackgroundColor>
+                    <Button.TextColor>
+                        <OnPlatform  x:TypeArguments="Color" Android="White"></OnPlatform>
+                    </Button.TextColor>
+                </Button>
+                
+                <Button Text="Menu" Command="{Binding MenuCommand}" HorizontalOptions="EndAndExpand">
+                    <Button.BackgroundColor>
+                        <OnPlatform  x:TypeArguments="Color" Android="#1BA1E2"></OnPlatform>
+                    </Button.BackgroundColor>
+                    <Button.TextColor>
+                        <OnPlatform  x:TypeArguments="Color" Android="White"></OnPlatform>
+                    </Button.TextColor>
+                </Button>
+            </StackLayout>
+            <Entry Text="{Binding YourName}" Placeholder="Enter your name"></Entry>
+            <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"/>
+            <Button Text="{Binding SaveScoreText}" Command="{Binding SaveScoreCommand}">
+            <Button.BackgroundColor>
+                <OnPlatform  x:TypeArguments="Color" Android="#1BA1E2"></OnPlatform>
+            </Button.BackgroundColor>
+            <Button.TextColor>
+                <OnPlatform  x:TypeArguments="Color" Android="White"></OnPlatform>
+            </Button.TextColor>
+            </Button>
+        </StackLayout>
+        <controls:AdView Grid.Row="3" IsVisible="{Binding AdViewVisible}"></controls:AdView>
+    </Grid>
+</ContentPage>

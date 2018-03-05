@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TapFast2.HowToPage"
+             BindingContext="{Binding HowToViewModel, Source={StaticResource Locator}}">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="0, 20, 0, 0"
+                    Android="0, 0, 0, 0"
+                    WinPhone="0, 0, 0, 0" />
+    </ContentPage.Padding> />
+    <ScrollView>
+        <StackLayout Padding="10" Spacing="10">
+            <Label Text="Game Description" FontSize="Medium" TextColor="#3498db" HorizontalOptions="Start"></Label>
+            <Label Text="{Binding GameDescriptionText}" HorizontalOptions="StartAndExpand"></Label>
+
+            <Label Text="Game Instructions" FontSize="Medium" TextColor="#3498db" HorizontalOptions="Start"></Label>
+            <Label Text="{Binding GameInstructionsText}" HorizontalOptions="StartAndExpand"></Label>
+
+            <Label Text="Game difficulty modes:" FontSize="Medium" TextColor="#3498db" HorizontalOptions="Start"></Label>
+            <Label Text="{Binding DifficultyModesText}" HorizontalOptions="StartAndExpand"></Label>
+
+            <Label Text="Game progress" FontSize="Medium" TextColor="#3498db" HorizontalOptions="Start"></Label>
+            <Label Text="{Binding GameProgressText}" HorizontalOptions="StartAndExpand"></Label>
+
+            <Label Text="Good luck!" FontSize="Medium" TextColor="#3498db" HorizontalOptions="Start"></Label>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

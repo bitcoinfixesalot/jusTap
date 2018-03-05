@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TapFast2.AboutPage"
+             BindingContext="{Binding AboutViewModel, Source={StaticResource Locator}}">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="0, 20, 0, 0"
+                    Android="0, 0, 0, 0"
+                    WinPhone="0, 0, 0, 0" />
+    </ContentPage.Padding>
+    <ScrollView>
+    <StackLayout Padding="10" Spacing="10">
+            <!--<controls:ImageButton Image="{Binding Logo}"
+                                  Text="Share the game" FontSize="Small" Command="{Binding ShareCommand}" 
+                                  ImageHeightRequest="180" ImageWidthRequest="180" Orientation="ImageOnBottom" HeightRequest="200"
+                                  VerticalOptions="StartAndExpand" BackgroundColor="White"></controls:ImageButton>-->
+        <Image Source="{Binding Logo}" HorizontalOptions="Center" ></Image>
+        <Button Text="Share the game" WidthRequest="300" Command="{Binding ShareCommand}" HorizontalOptions="CenterAndExpand"></Button>
+
+
+            <!--<Label Text="jusTap" FontSize="Medium" TextColor="#3498db" HorizontalOptions="Start"></Label>-->
+
+        <Label Text="{Binding Version}" FontSize="Default" TextColor="#3498db" HorizontalOptions="Start"></Label>
+
+        <Label Text="Developer(s)" FontSize="Default" TextColor="#3498db" HorizontalOptions="Start"></Label>
+        <Label Text="{Binding DevelopersText}" HorizontalOptions="StartAndExpand"></Label>
+        <Label Text="Disclaimer" FontSize="Default" TextColor="#3498db" HorizontalOptions="Start"></Label>
+        <Label Text="{Binding DisclaimerText}" HorizontalOptions="StartAndExpand"></Label>
+
+
+        <!--<Button Text="Share the game" WidthRequest="300" Command="{Binding ShareCommand}" HorizontalOptions="CenterAndExpand" BackgroundColor="#1BA1E2" TextColor="White"></Button>-->
+        <!--<controls:HyperLinkLabel x:Name="shareHyperlink" Text="Share the game"></controls:HyperLinkLabel>-->
+
+        <!--<Button Text="Rate" Command="{Binding RateCommand}" HorizontalOptions="CenterAndExpand"></Button>-->
+        <Button Text="Send Feedback" WidthRequest="300" Command="{Binding SendFeedbackCommand}" HorizontalOptions="CenterAndExpand" BackgroundColor="#1BA1E2" TextColor="White"></Button>
+
+    </StackLayout>
+    </ScrollView>
+</ContentPage>
